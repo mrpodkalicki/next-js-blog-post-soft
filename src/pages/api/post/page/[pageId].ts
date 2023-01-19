@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { PostDto } from "@/pages/shared/models/postDto";
+import { PostDTO } from "@/pages/shared/models/postDTO";
 import { ReqMethodType } from "@/pages/shared/models/reqMethod";
 import { getPagePost } from "@/pages/api/post/helpers";
 
-const handler = (req: NextApiRequest, res: NextApiResponse<PostDto[]>): any => {
+const handler = (req: NextApiRequest, res: NextApiResponse<PostDTO[]>): any => {
   const method = req.method as ReqMethodType;
   const { pageId } = req.query;
   console.log(req.query);
