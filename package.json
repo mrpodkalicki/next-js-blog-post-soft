@@ -18,8 +18,9 @@
     "prettier": "prettier --write ."
   },
   "lint-staged": {
-    "src/**/*.{ts, tsx, js,jsx}": [
-      "yarn format"
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint . --fix --ignore-path .gitignore",
+      "prettier --write ."
     ]
   },
   "dependencies": {
