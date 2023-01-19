@@ -9,6 +9,11 @@ const seoData: SeoType = {
 };
 
 export default function Home() {
+  // const {result} = useQueryHook<any>(['post'], () => getPostsRequest());
+  // const {result: postIdRes} = useQueryHook<any>(['postId'], () => getPostsByIdRequest('126'));
+  // const {result: pagiResult} = useQueryHook<any>(['post-page'], () => getPostsPagination('1'));
+  // const {data} = result;
+
   return (
     <LayoutComponent seoData={seoData}>
       <p>testt</p>
