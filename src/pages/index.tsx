@@ -1,15 +1,17 @@
-import Head from "next/head";
-import styles from "@/styles/Home.module.css";
+import LayoutComponent from "@/components/layout";
+import { SeoType } from "@/components/SEO/seo.type";
+
+const seoData: SeoType = {
+  ogDescriptionContent: "",
+  ogTitleContent: "",
+  ogURL: "",
+  descriptionContent: "",
+};
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title> Next App</title>
-      </Head>
-      <main className={styles.main}>
-        <p>NEXT</p>
-      </main>
-    </>
+    <LayoutComponent seoData={seoData}>
+      <p>testt</p>
+    </LayoutComponent>
   );
 }
