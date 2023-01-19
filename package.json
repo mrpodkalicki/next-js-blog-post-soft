@@ -13,13 +13,13 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "eslint . --fix --ignore-path .gitignore",
+    "format": "yarn prettier && yarn lint-fix",
+    "lint-fix": "eslint . --fix --ignore-path .gitignore",
     "prettier": "prettier --write ."
   },
   "lint-staged": {
     "src/**/*.{ts, tsx, js,jsx}": [
-      "yarn format",
-      "yarn prettier"
+      "yarn format"
     ]
   },
   "dependencies": {
