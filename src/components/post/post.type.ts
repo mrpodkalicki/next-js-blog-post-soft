@@ -3,6 +3,7 @@ export interface PostType {
   categories: number[];
   title: string;
   description: string;
-  imageUrl: string;
+  imageSrc: string;
+  imageAlt: string;
   link: string;
 }

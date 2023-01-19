@@ -5,9 +5,12 @@ export const useQueryHook = <T>(
   configuration: [string, string?],
   functionToFetchData: () => Promise<AxiosResponse<T>>
 ) => {
-  const result = useQueryReactQuery(configuration, functionToFetchData);
+  const response = useQueryReactQuery(configuration, functionToFetchData);
+  const { status, data: result }: AxiosResponse<T, any> =
+    response.data || ({} as AxiosResponse<T, any>);
 
   return {
+    status,
     result,
   };
 };
